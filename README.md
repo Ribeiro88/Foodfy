@@ -18,7 +18,7 @@ Desafio Final do Bootcamp Launchbase da Rocketseat
 <strong>4 -</strong> Configure o acesso ao banco de dados e aos emails com suas credenciais<br> nos arquivos
 <strong>src/config/db.js</strong> e <strong>src/lib/mailer.js</strong>
 
-<strong>5 -</strong> Copie todas as queries encontradas no arquivo <strong>foody.sql</strong> e execute no <strong>postbird</strong><br> para criar 
+<strong>5 -</strong> Copie todas as queries encontradas no arquivo <strong>foofdy.sql</strong> e execute no <strong>postbird</strong><br> para criar 
 seu próprio banco de dados;
 
 <strong>6 -</strong> Preencha o banco de dados com usuários, chefs e receitas executando:<br>
