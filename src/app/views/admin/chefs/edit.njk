@@ -1,0 +1,33 @@
+{% extends "includes/layout.njk" %}
+
+{% block head %}
+    <title>Editar Chef - {{ chef.name }}</title>
+{% endblock head %}
+
+{% block content %}
+
+<section class="recipes">
+    
+    <div class="recipe-show-info" style="grid-template-columns: 3fr 0.5fr 0.5fr;">
+        <h3>Editando chef</h3>
+        {% if session.is_admin == true %}
+            <button type="submit" class="delete" form="form-delete">Deletar</button>        
+            <button type="submit" form="put-form">Salvar chef</button>
+        {%endif%}
+    </div>
+
+    <form id="put-form" method="POST" action="/admin/chefs?_method=PUT" enctype="multipart/form-data">
+        {% include 'admin/chefs/fields.njk' %}
+        <input type="hidden" name="id" value="{{chef.id}}">    
+    </form>
+
+    <form id="form-delete" method="POST" action="/admin/chefs?_method=DELETE">
+        <input type="hidden" name="id" value={{chef.id}}>    
+    </form>
+        
+</section>
+
+<script src="/js/delete.js"></script>
+
+{% endblock content %}
+

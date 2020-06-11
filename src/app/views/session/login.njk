@@ -1,0 +1,27 @@
+{% extends "includes/layout_login.njk" %}
+
+    {% block content %}
+        <section class="logar">
+            <form method="POST" action="/sessions/login">
+                <div class="form_logar">
+                    <div class="header">
+                        <div class="logo_login">
+                            <img src="/images/Foodfy_login.png" alt="Login Foodfy">
+                        </div>
+                        <h3>Iniciar Sessão</h3>
+                    </div>
+                    <div class="form_control">
+                        {% include './fields.njk' %}
+                        <div class="form_buttons">
+                            <div class="item" style="align-self:center; padding: 0;">
+                                <a href="/sessions/forgot_password" class="perdeu">Perdeu a senha?</a>
+                            </div>
+                            
+                            <button class="login-register" type="submit" style="margin-bottom: 0px;">Acessar</button>     
+                        </div> 
+                    </div>
+                </div>
+            </form>
+        </section>
+        <script src="/js/validation.js"></script>
+    {% endblock content %}

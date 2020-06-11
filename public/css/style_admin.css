@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+*{margin: 0; padding: 0; font-family: 'Roboto', sans-serif;}
+.container{max-width: 940px; margin: 0 auto;}
+
+/*Header*/
+header{background-color: #111111; height: 80px;}
+header .links{padding: 27px 0px;}
+.links{display: grid; grid-template-columns: 117px 100px 80px 1fr 1fr; gap: 10px;}
+header .links a{text-decoration: none;  font-size: 16px; color:#ffffff; line-height: 19px; filter: brightness(90%); cursor: pointer; text-transform: uppercase; align-self: center;} 
+header .links a:hover{font-weight: bold;}
+.logout{font-size: 16px;color: #ffffff;line-height: 19px;filter: brightness(90%);cursor: pointer;text-transform: uppercase;align-self: center;
+background: transparent; border: none;}
+.logout:hover{font-weight: bold;}
+
+
+/*Recipe*/
+.recipes {padding-top: 50px;}
+.cards-content, .card{display: grid; grid-template-columns: 1fr 1fr; gap: 20px;}
+.card-image-container {margin-bottom: 20px;}
+.card-image-container img{width: 100%; height: 100px; border-radius: 15px;}
+.card-content h3{font-size: 14px;color: #111111; line-height: 21px; margin-bottom: 5px;}
+.card-content p{font-size: 14px;color: #777777; line-height: 16px; margin-bottom: 10px;}
+.card-content a{font-size: 14px;color: #6558C3; line-height: 16px; text-decoration: none;}
+
+/*Receitas Full Page*/
+
+.receitas-fullpage {padding-top: 56px;}
+.recipe-show-info{display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-bottom: 24px;}
+.recipe-show-info h3{font-size: 19px; line-height:23px; color: #111111; font-weight: bold;}
+.recipe-show-info button, .recipe-show-info a{font-size:16px; justify-self: right; border: none; cursor: pointer; background: #6558C3; color:#ffffff; padding:5px; text-align: center; text-decoration: none; border-radius: 4px; width: 136px;}
+.recipe-show-info button.delete{background-color: #DC4747;}
+.destaque-receitas-image{max-width: 940px; height: auto; padding-bottom: 10px;}
+.destaque-receitas-image img {width: 100%; height:280px; border-radius: 15px; object-fit: cover;}
+.receitas-title{text-align: center;}
+.receitas-title h1{font-weight: bold;font-size: 36px;color: #111111;}
+.receitas-title p{font-size: 20px;color: #777777;}
+.receitas-ingredientes{padding-top: 50px; padding-bottom: 25px;}
+.receitas-ingredientes div{display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 136px; align-items: baseline;}
+.receitas-ingredientes h2{font-size: 24px;color: #111111; font-weight: bold;}
+.receitas-ingredientes span{font-size: 12px; color: #999999; cursor: pointer;}
+.receitas-ingredientes ul{padding-top: 20px; padding-bottom: 39px; list-style: none;}
+.receitas-ingredientes ul li{font-size: 18px;color: #444444; line-height: 28px;}
+.receitas-modo-de-preparo{padding-bottom: 25px;}
+.receitas-modo-de-preparo div{display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 386px; align-items: baseline;}
+.receitas-modo-de-preparo h2{font-size: 24px;color: #111111; font-weight: bold;}
+.receitas-modo-de-preparo span{font-size: 12px; color: #999999; cursor: pointer;}
+.receitas-modo-de-preparo ul{padding-top: 20px; padding-bottom: 39px; list-style: none;}
+.receitas-modo-de-preparo ul li{font-size: 18px;color: #444444; line-height: 28px;}
+.receitas-informacoes{padding-bottom: 25px;}
+.receitas-informacoes div{display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 520px; align-items: baseline;}
+.receitas-informacoes h2{font-size: 24px;color: #111111; font-weight: bold;}
+.receitas-informacoes span{font-size: 12px; color: #999999; cursor: pointer;}
+.receitas-informacoes p{padding-top: 20px; font-size: 18px;color: #444444; line-height: 28px;}
+
+/*Form*/
+
+input, textarea, select{width: 100%;outline: none;color: #000; font-size: 14px; border: 1px solid #DDDDDD;
+    border-radius: 4px; padding: 12px 6px; box-sizing: border-box;}
+input::placeholder{font-size: 16px;}
+.item{padding: 0px 0px 30px 0px;}
+.item div{font-size: 16px;color: #111111; font-weight: bold; margin-bottom: 10px;}
+.item button{background:transparent; border:none; cursor:pointer; font-weight:Bold;font-size: 16px; line-height: 19px; text-decoration:none; color: #6558C3;}
+
+
+/*Logar admin*/
+.back_login{background: #ffffff;}
+.logo_login{width: 94px; height: 32px; margin: 0 auto; margin-bottom: 80px;}
+.logar {padding-top: 60px;}
+.form_logar{width: 500px; height: 360px; margin: 0 auto; background: #ffffff;}
+.form_logar h3{text-align: center;}
+.form_control{padding: 30px;}
+
+.form_control .btn_login{text-align: center; padding: 4px; background:#6558C3; cursor:pointer; border-radius: 4px; width: 140px; border: 0;
+    color: #fff;}
+.btn_login a{color:#fff; text-decoration:none}
+.perdeu{color:#969696; text-decoration: none;}
+.perdeu:hover{font-weight: bold;}
+.form_buttons{display: grid;grid-template-columns: 1fr 1fr;}
+
+/*Chefs*/
+.chef-content{display: grid;grid-template-columns: 1fr 1fr 1fr 1fr;gap: 20px;}
+.chef-content .card{display: grid;grid-template-columns: 64px 1fr;gap: 10px;}
+.chef-container img{width: 64px; height: 64px; border-radius: 50%;}
+.chef-card-content{margin: 10px 0px;}
+.chefs-destaque {width: 200px;margin: 0 auto; padding-top: 50px; padding-bottom: 30px;}
+.chefs-destaque img{border-radius: 100%; width: 200px; height: 200px;}
+
+/*Photos Upload*/
+
+form .foto_content{display: grid;grid-template-columns: repeat(5, 1fr);gap: 8px;width: 151px;}
+form .item #photos-upload{position: relative;display: block;overflow: hidden;width: 151px;}
+form .item #photos-upload p{align-items: center;justify-content: center;display: flex;background: #FFFFFF;
+border: 1px solid #DDDDDD;border-radius: 3.5px;width: 149px;height: 149px;color: #777;}
+form .item #photos-upload p i{font-size: 200%;}
+form .item #photos-input{position: absolute;top: 0;left: 0;display: block;
+overflow: hidden;width:100%;height: 100%;opacity: 0;cursor: pointer;}
+form .item #photos-preview{width: 151px;height: 151px;display: grid;grid-template-columns: repeat(5, 1fr);gap: 4px;}
+form .item #photo-preview {width: 151px;height: 151px;}
+form .item #photos-preview img, form .item #photo-preview img{width: 100%;height: 150px;object-fit: cover;}
+#photos-preview .photo, #photo-preview .photo{position: relative;width: 151px;height: 151px;background: #FFFFFF;border: 1px solid #DDDDDD;border-radius: 3.5px;}
+#photos-preview .photo i, #photo-preview .photo i{position: absolute;top: 0;left: 0;background-color: rgba(255, 255, 255, 0.8);
+color: #ff0000;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;
+font-size: 500%;cursor: pointer;transition: opacity 200ms;opacity: 0;}
+#photos-preview .photo:hover i, #photo-preview .photo:hover i{opacity: 1;}
+.edit-gallery{position: relative;display: grid;grid-template-columns: 300px;justify-content: flex-end;}
+.edit-gallery-preview{display: grid;grid-template-columns: repeat(5, 1fr);gap: 8px;width: 51px;height: 51px;}
+.edit-gallery-preview  div{position: relative;width: 51px;height: 51px;background: #FFFFFF;border: 1px solid #DDDDDD;border-radius: 3.5px;cursor: pointer;}
+.edit-gallery-preview  div img{width: 100%;height: 51px;object-fit: cover;}
+.item .avatar-upload {position: relative;display: block;overflow: hidden;width: 139px;margin-top: 15px;}
+.item .avatar-upload p {padding: 8px 4px;background-color: #6558C3;color: white;border-radius: 4px;font-weight: bold;box-shadow: 0 2px 2px -6px #333;
+box-sizing: border-box;text-align: center;width: 100%;font-size: 16px;}
+.item .avatar-path {display: grid;grid-template-columns: auto 1fr;gap: 15px;}
+.item .avatar-path span {opacity: 0.36;}
+.item .avatar-path i {color: red;width: 15px;height: 100%;font-size: 100%;cursor: pointer;}
+.item #avatar-input {position: absolute;top: 0;left: 0;padding: 0;margin: 0;overflow: hidden;
+width: 100%;height: 100%;opacity: 0;cursor: pointer;}
+
+/*FORM MY ACCOUNT*/
+.login-register{padding:9px 35px; width: 100%; background-color: #6558C3; border: 0; border-radius: 4px; 
+font-size: 16px; font-weight: bold; color: #FFFFFF;text-align: center; cursor: pointer; margin-bottom: 10px;}
+.login-delete{padding:9px 35px; width: 100%; background-color: #DC4747; border: 0; border-radius: 4px; 
+    font-size: 16px; font-weight: bold; color: #FFFFFF;text-align: center; cursor: pointer;}
+
+/*Validate error*/
+.item .error{background-color: #e74c3c; padding: 4px; border-radius: 4px; color:#ffffff}
+
+/*Messages*/
+@keyframes hidemessage {to {top: -50px;opacity: 0;}}
+.messages {display: flex;justify-content: center;padding: 16px;position: absolute;width: 100%;color: white;
+top: 0;opacity: 1;animation: hidemessage 400ms 5s ease-out forwards;}
+.messages.error {background: #e74c3c;}
+.messages.success {background: rgb(122, 182, 30);}
+
+/*USERS*/
+.card-content button {color: #e74c3c; background: transparent; border: none;  font-size: 14px;  line-height: 16px; text-decoration: none; cursor: pointer;}

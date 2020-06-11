@@ -1,0 +1,21 @@
+{% extends "includes/layout_login.njk" %}
+{% block content %}
+    <section class="logar">
+        <form method="POST" action="/sessions/reset">
+            <div class="form_logar">
+                <div class="header">
+                    <div class="logo_login">
+                        <img src="/images/Foodfy_login.png" alt="Login Foodfy">
+                    </div>
+                    <h3>Nova Senha</h3>
+                </div>
+                <div class="form_control">
+                    {% include './fields_reset.njk' %}
+                    <div class="form_buttons" style="grid-template-columns: 1fr; justify-items: end;">
+                        <button class="btn_login" type="submit"><b>Nova Senha</b></button>
+                    </div>    
+                </div>
+            </div>     
+        </form>
+    </section>
+{% endblock%}

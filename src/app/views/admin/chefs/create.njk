@@ -1,0 +1,22 @@
+{% extends "includes/layout.njk" %}
+
+{% block head %}
+    <title>Novo chef</title>
+{% endblock head %}
+
+{% block content %}
+
+<section class="users recipes">
+    <form action="/admin/chefs" method="POST" enctype="multipart/form-data">
+        <div class="recipe-show-info">
+            <h3>Criando chef</h3>
+            <button type="submit">Salvar chef</button>
+        </div>
+
+        {% include 'admin/chefs/fields.njk' %}
+    </form>
+</section>
+
+<script src="/js/avatar.js"></script>
+
+{% endblock content %}

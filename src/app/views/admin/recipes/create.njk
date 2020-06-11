@@ -1,0 +1,24 @@
+{% extends "includes/layout.njk" %}
+
+{% block head %}
+    <title>Nova receita</title>
+{% endblock head %}
+
+{% block content %}
+
+<section class="recipes">
+    <form action="/admin/recipes" method="POST" enctype="multipart/form-data">
+        <div class="recipe-show-info">
+            <h3>Criando receita</h3>
+            <button type="submit">Salvar receita</button>
+        </div>
+
+        {% include 'admin/recipes/fields.njk' %}
+    </form>
+</section>
+
+
+<script src="/js/script_admin.js"></script>
+<script src="/js/imagegallery.js"></script>
+
+{% endblock content %}

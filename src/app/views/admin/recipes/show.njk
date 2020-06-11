@@ -1,0 +1,64 @@
+{% extends "includes/layout.njk" %}
+
+{% block head %}
+    <title>Receita - {{ recipe.title }}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="receitas-fullpage">
+    <div class="recipe-show-info">
+        <h3>Receita: {{recipe.title}}</h3> 
+        {% if recipe.user_id == session.userId or session.is_admin === true %}
+            <a href="/admin/recipes/{{recipe.id}}/edit">Editar receita</a>
+        {%endif%}
+    </div>
+    <div class="destaque-receitas-image">
+        <img src="{{ recipe.images[0].src }}"  alt="{{recipe.title}}" />
+    </div>
+    <div class="edit-gallery">
+        <div class="edit-gallery-content">
+            <div class="edit-gallery-preview">
+                {% for image in recipe.images %}
+                    <div>
+                        <img src="{{image.src}}" alt="{{image.name}}" {% if loop.index0 == 0 %} class="active" {%endif%} onclick="ImageGallery.setImage(event)" />
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="receitas-title">
+        <h1>{{recipe.title}}</h1>
+        <p>por {{recipe.author}}</p>
+    </div>
+    <div class="receitas-ingredientes">
+        <div>
+            <h2>Ingredientes</h2>
+        </div>
+        <ul>
+            {% for ingredients in recipe.ingredients %}
+            <li>- {{ingredients}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="receitas-modo-de-preparo">
+        <div>
+            <h2>Modo de preparo</h2>
+        </div>
+        <ul class="recipe">
+            {% for preparations in recipe.preparation %}
+            <li>- {{preparations}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="receitas-informacoes">
+        <div>
+            <h2>Informações adicionais</h2>
+        </div>
+        <p>{{recipe.information}}</p>
+    </div>
+</section>
+
+<script src="/js/imagegallery.js"></script>
+
+{%endblock content %}
+

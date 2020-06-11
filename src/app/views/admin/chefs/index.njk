@@ -1,0 +1,31 @@
+{% extends "includes/layout.njk" %}
+
+{% block content %}
+
+<section class="recipes">
+    <div class="recipe-show-info" style="padding-bottom:70px">
+       
+        {% if session.is_admin == true %}
+            <h3>Gerenciar chefs</h3>
+            <a href="/admin/chefs/create">Adicionar chef</a>
+        {% else %}
+            <h3>Chefs</h3>
+        {% endif %}
+            
+    </div>
+    <div class="cards-content chef-content">
+        {% for chef in chefs %} 
+            <div class="card">
+                <div class="card-image-container chef-container">
+                    <img src="{{chef.img}}" alt="{{chef.name}}">
+                </div>
+                <div class="card-content chef-card-content">
+                     <p>{{chef.name}}</p>
+                    <a href="/admin/chefs/{{chef.id}}" alt="{{chef.name}}" title="{{chef.name}}">Visualizar</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock content %}

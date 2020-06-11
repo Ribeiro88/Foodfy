@@ -1,0 +1,20 @@
+{% extends "includes/layout.njk" %}
+
+{% block content %}
+
+<section class="recipes">
+    <form method="POST" action="/admin/users">
+        <div class="recipe-show-info" style="padding-bottom:70px; grid-template-columns: 3fr 0.5fr 0.5fr;">
+        <h3>Criar Usuário</h3>
+            <button type="submit">Salvar</button>
+            <button style="background:rgba(138,138,138,1);">Cancelar</button>
+        </div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px">
+            {% include './register_fields.njk' %}
+        </div>
+    </form>
+</section>
+
+<script src="/js/validation.js"></script>
+
+{% endblock content %}

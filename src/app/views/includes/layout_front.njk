@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/style.css">
+        {% block head %}
+            <title>Foodfy</title>
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div>
+                    <ul>
+                        <li class="logo"><a href="/">Foodfy</a></li>
+                        <li class="menu"><a href="/sobre">Sobre</a></li>
+                        <li class="menu"><a href="/receitas">Receitas</a></li>
+                        <li class="menu"><a href="/chefs">Chefs</a></li>
+                        <li>
+                            <form action="/searchrecipe" method="get" class="form_search">
+                                <input type="search" name="filter" placeholder="Buscar uma receita" class="input_search">
+                                <button type="submit">Buscar</button>            
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            {% block content %}{% endblock content %}
+        </div>
+        <footer>
+            <p>Todos direitos reservados, receitas Foodfy.</p>
+        </footer>
+        <script>
+            const currentPage = location.pathname;
+            const menuItems = document.querySelectorAll(".menu a");
+
+            for (item of menuItems){
+                if(currentPage.includes(item.getAttribute("href"))){
+                    item.classList.add("active-menu");
+                }
+            }
+        </script>
+    </body>
+</html>

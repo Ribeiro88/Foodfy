@@ -1,0 +1,28 @@
+<div class="item">
+    <div>Nome</div>
+    <div><input type="text" name="name" value="{{chef.name}}" /></div>
+</div>
+<div class="item">
+    <div>Avatar</div>
+
+    <div id="photo-preview">
+        {% if files %}
+            {% for image in files %}
+                <div class="photo" id="{{ image.file_id }}">
+                    <img src="{{ image.src }}" alt="{{ file.name }}">
+                    <i class="material-icons" onclick="PhotosUpload.removeOldPhoto(event)">close</i>
+                </div>
+            {% endfor %}
+            
+            <input type="hidden" name="removed_files">
+        {% endif %}
+
+
+
+        <div class="avatar-upload">
+           <input id="avatar-input" type="file" name="avatar" accept="image/*" onchange="PhotosUpload.handleFileInput(event)">
+            <p>Enviar Avatar</p>
+        </div>
+    </div>
+</div>
+

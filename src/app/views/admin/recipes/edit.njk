@@ -1,0 +1,38 @@
+{% extends "includes/layout.njk" %}
+
+{% block head %}
+    <title>Editar Receita - {{ recipe.title }}</title>
+{% endblock head %}
+
+{% block content %}
+
+
+<section class="recipes">
+    
+    <div class="recipe-show-info" style="grid-template-columns: 3fr 0.5fr 0.5fr;">
+        <h3>Editando receita</h3>
+
+            {% if recipe.user_id == session.userId or session.is_admin == true %}
+              <button type="submit" class="delete" form="form-delete">Deletar</button>        
+              <button type="submit" form="put-form">Salvar receita</button>
+            {% endif %}
+       
+    </div>
+
+    <form id="put-form" action="/admin/recipes?_method=PUT" enctype="multipart/form-data" method="POST">
+        {% include 'admin/recipes/fields.njk' %}
+        <input type="hidden" name="id" value="{{recipe.id}}">    
+    </form>
+
+    <form id="form-delete" action="/admin/recipes?_method=DELETE" method="POST">
+        <input type="hidden" name="id" value={{recipe.id}}>    
+    </form>
+        
+</section>
+
+<script src="/js/script_admin.js"></script>
+<script src="/js/imagegallery.js"></script>
+<script src="/js/delete.js"></script>
+
+
+{% endblock content %}

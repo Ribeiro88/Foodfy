@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+*{margin: 0; padding: 0; font-family: 'Roboto', sans-serif;}
+body{display: flex; flex-direction: column; height: 100vh;}
+
+.container{max-width: 940px; margin: 0 auto;}
+
+/*Header*/
+header{text-align: left; padding: 36px 0px;}
+header div ul{position: relative;}
+header div ul li{display: inline-block;padding-left: 20px}
+header div ul li:last-of-type{position: absolute;right: 0px; top: -9px;}
+header div ul li a{text-decoration: none;  font-size: 16px; color:#111111; line-height: 19px; filter: brightness(90%); cursor: pointer;} 
+header div ul li a:hover{font-weight: bold;}
+.logo{width: 90.6px; height: 26.9px;padding-left: 0px;}
+.logo a{font-weight: bold; font-size: 20px;color: #111111; letter-spacing: 1.65px;}
+.active-menu{font-weight: bold;}
+.form_search input{background: #FFFFFF;border: 1px solid #DDDDDD;border-radius: 4px;color:#000; width: 246px; height: 37px; padding: 11px 15px;}
+.form_search button{background: #6558C3;border-radius: 4px; color:#fff; border: none; width: 91px; height: 37px; cursor: pointer;}
+
+
+/*Destaque*/
+.destaque{background: #FBDFDB;height: 366px;  display: grid; grid-template-columns: 1fr 1fr; border-radius: 30px;}
+.destaque-texto{padding: 117px 60px;}
+.destaque-texto h1{font-size: 32px;color: #111111;font-weight: 700; margin-bottom: 10px;}
+.destaque-texto p{opacity: 0.7;font-family: normal;font-size: 18px;color: #000000;line-height: 28px;}
+.destaque-boneco{width: 216px; height: 300px; padding-top: 66px; margin: 0 auto;}
+.destaque-boneco img{width: 100%;}
+
+/*Mais Acessados*/
+.mais-acessados{padding-top: 50px;}
+.mais-acessados h2{font-size: 24px;color: #111111; font-weight: bold; margin-bottom: 20px;}
+.mais-acessados .card{cursor: pointer;}
+.card{cursor: pointer;}
+.cards-content{display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;}
+.card-image-container {margin-bottom: 20px;}
+.card-image-container img{width: 100%; height: 110px; border-radius: 15px;}
+.card-content h3{font-size: 15px;color: #111111; line-height: 18px; margin-bottom: 5px;}
+.card-content p{font-size: 14px;color: #777777; line-height: 16px; margin-bottom: 50px;}
+
+/*Sobre*/
+.sobre{padding-top: 36px;}
+.sobre h2{font-size: 24px;color: #111111; line-height: 28px; margin-bottom: 20px;}
+.sobre h3{font-size: 20px;color: #111111; line-height: 24px; margin-bottom: 20px;}
+.sobre p{font-size: 18px;color: #444444;line-height: 28px; margin-bottom: 30px;} 
+
+
+/*Receitas*/
+.receitas{padding-top: 56px;}
+.recipe{display: none;}
+
+/*Receitas Full Page*/
+.receitas-fullpage {padding-top: 56px;}
+.destaque-receitas-image{max-width: 940px; width: 940px; height: auto; padding-bottom: 10px;}
+.destaque-receitas-image img {width: 100%;height: 280px;border-radius: 15px;object-fit: cover;}
+.receitas-title{text-align: center;}
+.receitas-title h1{font-weight: bold;font-size: 36px;color: #111111;}
+.receitas-title p{font-size: 20px;color: #777777;}
+.receitas-ingredientes{padding-top: 50px; padding-bottom: 25px;}
+.receitas-ingredientes div{display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 136px; align-items: baseline;}
+.receitas-ingredientes h2{font-size: 24px;color: #111111; font-weight: bold;}
+.receitas-ingredientes span{font-size: 12px; color: #999999; cursor: pointer;}
+.receitas-ingredientes ul{padding-top: 20px; padding-bottom: 39px; list-style: none;}
+.receitas-ingredientes ul li{font-size: 18px;color: #444444; line-height: 28px;}
+.receitas-modo-de-preparo{padding-bottom: 25px;}
+.receitas-modo-de-preparo div{display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 386px; align-items: baseline;}
+.receitas-modo-de-preparo h2{font-size: 24px;color: #111111; font-weight: bold;}
+.receitas-modo-de-preparo span{font-size: 12px; color: #999999; cursor: pointer;}
+.receitas-modo-de-preparo ul{padding-top: 20px; padding-bottom: 39px; list-style: none;}
+.receitas-modo-de-preparo ul li{font-size: 18px;color: #444444; line-height: 28px;}
+.receitas-informacoes{padding-bottom: 25px;}
+.receitas-informacoes div{display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 520px; align-items: baseline;}
+.receitas-informacoes h2{font-size: 24px;color: #111111; font-weight: bold;}
+.receitas-informacoes span{font-size: 12px; color: #999999; cursor: pointer;}
+.receitas-informacoes p{padding-top: 20px; font-size: 18px;color: #444444; line-height: 28px;}
+
+.chef-content{display: grid;grid-template-columns: 1fr 1fr 1fr 1fr;gap: 41px;}
+.chef-content .card{display: grid;grid-template-columns: 64px 131px;gap: 10px;}
+.chef-container img{width: 64px; height: 64px; border-radius: 50%;}
+.chef-card-content{margin: 10px 0px;}
+.chefs-destaque {width: 200px;margin: 0 auto; padding-top: 50px; padding-bottom: 30px;}
+.chefs-destaque img{border-radius: 100%; width: 200px; height: 200px;}
+.chef-card-content h1{font-size: 18px;color: #111111; margin-bottom: 5px;}
+
+/*Search*/
+.recipes h2{margin-bottom: 20px;}
+.card-content a{font-size: 14px;color: #6558C3;line-height: 16px; text-decoration: none;}
+
+/*Footer*/
+footer{background: #EEEEEE;height: 62px; margin-top: auto;}
+footer p{font-size: 14px;color: #999999;text-align: center; padding: 23px 0px;}
+
+/*Gallery*/
+.edit-gallery{position: relative;display: grid;grid-template-columns: 300px;justify-content: flex-end;}
+.edit-gallery-preview{display: grid;grid-template-columns: repeat(5, 1fr);gap: 8px;width: 51px;height: 51px;}
+.edit-gallery-preview  div{position: relative;width: 51px;height: 51px;background: #FFFFFF;border: 1px solid #DDDDDD;border-radius: 3.5px;
+cursor: pointer;}
+.edit-gallery-preview  div img{width: 100%;height: 51px;object-fit: cover;}
+
+/*Pagination*/
+.container .pagination {margin: 50px 0;display: flex;align-self: end;justify-content: center;}
+.pagination a,.pagination span {color: #6558C3; text-decoration: none;margin-right: 16px;}
+.pagination a:hover {filter: brightness(0.3);border-bottom: 1px solid #6558C3;}

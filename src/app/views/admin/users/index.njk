@@ -1,0 +1,35 @@
+{% extends "includes/layout.njk" %}
+
+{% block content %}
+
+<section class="users recipes">
+    <div class="recipe-show-info" style="padding-bottom:70px">
+       <h3>Usuários</h3>
+        <a href="/admin/users/register">Novo Usuário</a>
+    </div>
+    <div class="cards-content" style="grid-template-columns: 1fr 1fr 1fr">
+    
+        {% for user in users %}
+
+            <div class="card" style="grid-template-columns: 1fr; margin-bottom: 30px;">
+                <div class="card-content">
+                    <h3 style="font-size:18px">{{user.name}}</h3>
+                    <p style="font-size:14px">{{user.email}}</p>
+                    <div style="display: grid; grid-template-columns: 0fr 0fr; gap: 10px;">
+                        <a href="/admin/users/{{user.id}}/edit" alt="{{user.name}}" title="{{user.name}}" style="align-self: end;">Editar</a>
+                        <form class="form-delete" id="form-delete" action="/admin/users?_method=DELETE" method="POST">
+                            <input type="hidden" name="id" value={{user.id}}>  
+                            <button type="submit" class="delete-user"  style="{% if user.is_admin == true %}display:none{% else %}display:inline-block{% endif %}">Remover</button>  
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+       
+        {% endfor %}
+    </div>
+</section>
+
+<script src="/js/delete.js"></script>
+
+{% endblock content %}

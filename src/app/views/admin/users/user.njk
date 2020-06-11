@@ -1,0 +1,35 @@
+{% extends "includes/layout.njk" %}
+
+{% block content %}
+
+<section class="recipes">
+    <div class="recipe-show-info" style="padding-bottom:70px">
+       <h3 style="align-self: center; font-size:24px">Bem vindo {{user.name}}</h3>
+        <button type="submit" form="put-form">Salvar</button>
+    </form>
+    </div>
+    <form id="put-form" action="/admin/users?_method=PUT" method="POST">
+        <input type="hidden" name="id" value="{{user.id}}"> 
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px">
+            <div class="item">
+                <div>Nome</div>
+                <div><input type="text" name="name" placeholder="Digite o seu nome" value="{{user.name}}"  required></div>
+            </div>
+            <div class="item">
+                <div>Email</div>
+                <div><input type="email" name="email" id="email" placeholder="Digite o seu email" value="{{user.email}}" onblur="Validate.apply(this, 'isEmail')"></div>
+            </div>
+            <div>
+                <div>Senha</div>
+                <div class="input">
+                    <input type="password" name="password" placeholder="Digite sua nova senha caso queira atualizar seu cadastro" {%if not user.id%}
+                    style="display:none" {%else%} style="display:block" {%endif%}>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+<script src="/js/validation.js"></script>
+
+{% endblock content %}

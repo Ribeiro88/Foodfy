@@ -1,0 +1,14 @@
+<div class="cards-content">
+    {% for chef in chefs %} 
+        <div class="card">
+            <div class="card-image-container">
+                <img src="{{chef.image}}" alt="{{chef.title}}">
+            </div>
+            <div class="card-content">
+                <h3>{{chef.title}}</h3>
+                <p>por {{chef.name}}</p>
+                <a href="/admin/recipes/{{chef.id}}" alt="{{chef.title}}" title="{{chef.title}}">Visualizar</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>

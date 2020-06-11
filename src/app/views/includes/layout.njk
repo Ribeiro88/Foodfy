@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <title>Foodfy - Admin</title>
+        {% endblock head %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style_admin.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="links">
+                    <a href="/admin/recipes"><img src="/images/Foodfy.png" alt="Logo Foodfy" /></a>      
+                    <a href="/admin/recipes">Receitas</a>
+                    <a href="/admin/chefs">Chefs</a>
+                    {% if session.is_admin == true %}
+                        <a href="/admin/users">Usuários</a>
+                    {% else %}
+                        <a href="/admin/users/user">Minha Conta</a>
+                    {% endif %}
+                    <form action="/sessions/logout" method="POST" style="justify-self: end;">
+                        <button class="logout">Sair</button>
+                    </form>        
+                </div>
+            </div>
+        </header>
+        {% include "includes/message.njk" %}
+        <div class="container">
+            {% block content %}{% endblock content %}
+        </div>
+    </body>
+</html>

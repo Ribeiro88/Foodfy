@@ -1,0 +1,27 @@
+{% extends "includes/layout_front.njk" %}
+
+{% block head %}
+    <title>Foodfy - Receitas</title>
+{% endblock %}
+
+{% block content %}
+      
+<section class="recipes">
+    <h2>Buscando por "{{filter}}"</h2>
+    <div class="cards-content">
+        {% for recipe in recipes %}
+        <div class="card">
+            <div class="card-image-container" style="margin-bottom: 10px;">
+                <img src="{{recipe.file.src}}" alt="{{recipe.title}}">
+            </div>
+            <div class="card-content">
+                <h3>{{recipe.title}}</h3>
+                <p style="margin-bottom: 10px;">por {{recipe.chef_name}}</p>
+                <a href="/recipes/{{recipe.id}}" alt="{{recipe.title}}" title="{{recipe.title}}">Visualizar</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "includes/layout.njk" %}
+
+{% block head %}
+    <title>Chef - {{ chef.name }}</title>
+{% endblock head %}
+
+{% block content %}
+<section class="receitas-fullpage">
+    <div class="recipe-show-info">
+        <h3>Chef: {{chef.name}}</h3> 
+        {% if session.is_admin == true %}
+            <a href="/admin/chefs/{{chef.id}}/edit">Editar chef</a>
+        {% endif %}
+    </div>
+    <div class="destaque-receitas-image chefs-destaque">
+        <img src="{{chef.img}}" alt="{{chef.name}}">
+    </div>
+    <div class="receitas-title">
+        <h1>{{chef.name}}</h1>
+        {% if chef.total_recipes == 1 %}
+            <p>{{chef.total_recipes}} receita</p>
+        {% else %}
+            <p>{{chef.total_recipes}} receitas</p>
+        {% endif %}
+    </div>
+</section>
+<section class="recipes">
+    <h3 style="margin-bottom:30px">Receitas</h3>
+    <div class="cards-content">
+         {% for recipe in recipes %}
+            {% if chef.id == recipe.chef_id %}
+                <div class="card">
+                    <div class="card-image-container">
+                        <a href="/recipes/{{ recipe.id }}">
+                            <img src="{{recipe.src}}" alt="{{recipe.title}}">
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>{{recipe.title}}</h3>
+                        <p>por {{chef.name}}</p>
+                        <a href="/admin/recipes/{{recipe.id}}" alt="{{recipe.title}}" title="{{recipe.title}}">Visualizar</a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{%endblock content %}
